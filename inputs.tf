@@ -3,11 +3,6 @@ variable "vpc_id" {
   description = "VPC that you wish to deploy into"
 }
 
-variable "private_subnets" {
-  type        = list(string)
-  description = "List of IDs for subnets to deploy private resources into."
-}
-
 variable "public_subnets" {
   type        = list(string)
   description = "List of IDs for subnets to deploy public resources into."
