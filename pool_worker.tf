@@ -33,4 +33,8 @@ module "worker" {
   user_data = var.worker_cfg.userdata
 
   cluster_tag = var.cluster_tag
+
+  instance_tags = {
+    "boundary:hostset" = "${var.cluster_tag}-boundary-worker"
+  }
 }

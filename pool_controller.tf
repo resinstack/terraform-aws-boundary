@@ -34,4 +34,8 @@ module "controller" {
   user_data = var.controller_cfg.userdata
 
   cluster_tag = var.cluster_tag
+
+  instance_tags = {
+    "boundary:hostset" = "${var.cluster_tag}-boundary-controller"
+  }
 }
